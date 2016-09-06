@@ -61,10 +61,15 @@ gem 'pry'
 gem 'pry-nav'
 gem 'pry-doc'
 
+group :development, :test do
+  gem 'byebug'
+end
+
 
 group :test do
   gem 'guard-rspec'    # Continuous testing
   gem 'rspec-rails'    # Test framework with Rail extensions
+  gem 'rspec-its'      # its method as a short-hand to specify the expected value of an attribute
   gem 'poltergeist'    # Driver for PhantomJS headless browser
   gem 'capybara'       # DSL for browser control
   gem 'rspec-sidekiq'  # RSpec helpers for Sidekiq
