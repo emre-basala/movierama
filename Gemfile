@@ -52,6 +52,9 @@ gem 'omniauth' # Authentication
 gem 'omniauth-github'
 gem 'cancan'   # Authorisation
 
+gem 'sidekiq' # background processing
+gem 'sidekiq'
+
 
 # Debugger
 gem 'pry'
@@ -64,4 +67,5 @@ group :test do
   gem 'rspec-rails'    # Test framework with Rail extensions
   gem 'poltergeist'    # Driver for PhantomJS headless browser
   gem 'capybara'       # DSL for browser control
+  gem 'rspec-sidekiq'  # RSpec helpers for Sidekiq
 end
