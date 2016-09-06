@@ -3,7 +3,7 @@ class VotesController < ApplicationController
     authorize! :vote, _movie
 
     _voter.vote(_type)
-    NotificationEmailer.perform_async(vote: _type, movie_id: _movie.id)
+    _send_notification_email
     redirect_to root_path, notice: 'Vote cast'
   end
 
@@ -30,5 +30,9 @@ class VotesController < ApplicationController
 
   def _movie
     @_movie ||= Movie[params[:movie_id]]
+  end
+
+  def _send_notification_email
+    NotificationEmailer.perform_async(vote: _type, movie_id: _movie.id)
   end
 end
