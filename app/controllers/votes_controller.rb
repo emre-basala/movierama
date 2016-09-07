@@ -33,6 +33,6 @@ class VotesController < ApplicationController
   end
 
   def _send_notification_email
-    NotificationEmailer.perform_async(vote: _type, movie_id: _movie.id)
+    NotificationEmailWorker.perform_async(_movie.id, _type)
   end
 end
