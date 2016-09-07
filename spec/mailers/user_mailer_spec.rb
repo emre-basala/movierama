@@ -1,9 +1,7 @@
 require "rails_helper"
 
 RSpec.describe UserMailer do
-
   let!(:author) { User.create(uid: 'null|12345', name: 'Bob', email: "author@example.com") }
-
   let!(:movie) {
     Movie.create(
       title:        'Empire strikes back',

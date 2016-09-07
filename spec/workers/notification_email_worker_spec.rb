@@ -15,9 +15,9 @@ RSpec.describe NotificationEmailWorker do
     let(:notification_email) { double(:notification_email) }
     it "delegates email sending to UserMailer" do
       expect(UserMailer).to receive(:notification_email).with(movie: movie, vote: "like").and_return(notification_email)
-      expect(notification_email).to receive(:deliver_later)
+      expect(notification_email).to receive(:deliver!)
 
-      subject.perform(movie_id: movie.id, vote: vote)
+      subject.perform(movie.id, vote)
     end
   end
 end

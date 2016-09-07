@@ -52,8 +52,7 @@ gem 'omniauth' # Authentication
 gem 'omniauth-github'
 gem 'cancan'   # Authorisation
 
-gem 'sidekiq' # background processing
-gem 'sidekiq'
+gem 'sidekiq' # Background processing
 
 
 # Debugger

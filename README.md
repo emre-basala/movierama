@@ -65,6 +65,14 @@ Login/signup use Omniauth with Github as a provider. If you're using Pow and the
 If not, you'll need to get your own OAuth tokens from Github and edit
 `.env` appropriately.
 
+#### Getting the background processing to work for sending notification emails.
+
+    $ cp .env.example .env
+
+and edit the SMTP credentials with valid credentials.
+
+    $ bundle exec sidekiq
+to run Sidekiq processes in the background.
 
 
 ### Screenshot

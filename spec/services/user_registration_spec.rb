@@ -1,9 +1,7 @@
 require "rails_helper"
 
 RSpec.describe UserRegistration do
-
   let(:auth_hash_json) { File.read(File.join("spec", "fixtures", "auth_hash.json")) }
-
   let(:user_registration) { described_class.new(JSON.parse(auth_hash_json)) }
 
   describe "user" do
@@ -27,6 +25,5 @@ RSpec.describe UserRegistration do
         expect(user.name).to eq("already-existing-user")
       end
     end
-
   end
 end

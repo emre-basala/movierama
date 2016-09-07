@@ -6,8 +6,7 @@ class UserMailer < ActionMailer::Base
     @movie = movie
     @user = movie.user
     @vote = vote
-    # mail(subject: subject_for(vote), to: @user.email)
-    mail(subject: subject_for(vote), to: "emrebasala@gmail.com")
+    mail(subject: subject_for(vote), to: @user.email)
   end
 
   private
