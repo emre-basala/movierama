@@ -33,7 +33,7 @@ class UserRegistration
     else
       @user = User.create(
         uid:        uid,
-        name:       @auth_hash['info']['name'],
+        name:       @auth_hash['info']['name'] || @auth_hash['info']['nickname'],
         email:      @auth_hash['info']['email'],
         created_at: Time.current.utc.to_i
       )
