@@ -1,0 +1,13 @@
+Dear #{@user.name}
+
+%p
+  You have received a new vote for
+  %strong
+    = @movie.title
+
+- if @vote == "like"
+  %p Someone likes it! So cool!
+- else
+  %p Sadly, someone hates it! Well "hate" is a strong word, we meant, they don't like it so much!
+
+Kind regards
